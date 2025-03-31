@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://cop15v8wf1bq"]
+
+[ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://FondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="1_lnt83"]
+[ext_resource type="Script" uid="uid://bnto55mqa2xu3" path="res://scripts/menu.gd" id="1_p25xy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]
+bg_color = Color(0, 0, 0, 0.607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17m5t"]
+bg_color = Color(0, 0, 0, 0.607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp3rd"]
+bg_color = Color(0, 0, 0, 0.607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0, 0, 0, 0.607843)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.023
+anchor_bottom = 1.035
+offset_right = -37.496
+offset_bottom = -20.6801
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p25xy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.647
+anchor_bottom = 0.708
+offset_right = -227.262
+offset_bottom = -183.04
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.312583, 0.317954, 0.332728, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 9.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lnt83")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -37.0
+offset_right = 125.5
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_p25xy")
+text = "Jugar"
+
+[node name="Inicio Sesion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_17m5t")
+text = "Iniciar Sesion"
+
+[node name="Opciones" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp3rd")
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_kim34")
+text = "Salir"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -251.0
+offset_right = 162.5
+offset_bottom = -91.9999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "LAS AVENTURAS DE PIXEL"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Inicio Sesion" to="." method="_on_inicio_sesion_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
