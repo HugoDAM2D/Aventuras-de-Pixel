@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b6fjqpwi4atx3"]
 
-[ext_resource type="Script" uid="uid://bny6x6pdwvim1" path="res://opciones.gd" id="1_56tvd"]
+[ext_resource type="Script" uid="uid://bny6x6pdwvim1" path="res://scripts/opciones.gd" id="1_56tvd"]
 [ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://FondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="1_idus3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]

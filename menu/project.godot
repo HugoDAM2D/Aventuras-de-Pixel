@@ -11,8 +11,18 @@ config_version=5
 [application]
 
 config/name="Menu"
+run/main_scene="uid://cop15v8wf1bq"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CreateDataBase="*res://baseDatos/createDataBase.gd"
+UsuarioMenu="*res://scripts/usuarioMenu.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
 [rendering]
 

@@ -108,6 +108,13 @@ theme_override_font_sizes/font_size = 40
 text = "LAS AVENTURAS DE PIXEL"
 horizontal_alignment = 1
 
+[node name="Usuario" type="Label" parent="."]
+layout_mode = 0
+offset_left = 934.0
+offset_top = 30.0
+offset_right = 1123.0
+offset_bottom = 116.0
+
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Inicio Sesion" to="." method="_on_inicio_sesion_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
