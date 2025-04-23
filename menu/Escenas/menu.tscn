@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cop15v8wf1bq"]
 
-[ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://FondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="1_lnt83"]
+[ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="1_lnt83"]
 [ext_resource type="Script" uid="uid://bnto55mqa2xu3" path="res://scripts/menu.gd" id="1_p25xy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]

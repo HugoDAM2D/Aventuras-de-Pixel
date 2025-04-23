@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjupsinkvrl1x"
-path="res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"
+uid="uid://b6uid421j6j2m"
+path="res://.godot/imported/coin.png-24e25f1ae3ee00996800ce1ab5ae8804.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg"
-dest_files=["res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"]
+source_file="res://recursos/sprites/coin.png"
+dest_files=["res://.godot/imported/coin.png-24e25f1ae3ee00996800ce1ab5ae8804.ctex"]
 
 [params]
 

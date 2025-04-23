@@ -19,7 +19,7 @@ func crear_tablas():
 		CREATE TABLE IF NOT EXISTS Usuario (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			username TEXT NOT NULL,
-			password_hash TEXT NOT NULL,
+			password TEXT NOT NULL
 		);
 	""")
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjupsinkvrl1x"
-path="res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"
+uid="uid://cg62xovvu0cvx"
+path="res://.godot/imported/fruit.png-17f96f49197bee0e99c9a52303ba5976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg"
-dest_files=["res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"]
+source_file="res://recursos/sprites/fruit.png"
+dest_files=["res://.godot/imported/fruit.png-17f96f49197bee0e99c9a52303ba5976.ctex"]
 
 [params]
 

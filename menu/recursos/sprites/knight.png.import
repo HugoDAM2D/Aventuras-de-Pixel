@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjupsinkvrl1x"
-path="res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"
+uid="uid://c8ah3u8g6nrfs"
+path="res://.godot/imported/knight.png-9b4bfda0fd76f9f4f7512c62bd6508e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg"
-dest_files=["res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"]
+source_file="res://recursos/sprites/knight.png"
+dest_files=["res://.godot/imported/knight.png-9b4bfda0fd76f9f4f7512c62bd6508e3.ctex"]
 
 [params]
 
