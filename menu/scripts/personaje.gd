@@ -4,6 +4,13 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
+var posicion_inicial: Vector2
+
+func _ready():
+	posicion_inicial = position
+
+func reiniciar_posicion():
+	position = posicion_inicial
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
