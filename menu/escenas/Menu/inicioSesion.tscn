@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbowkksthp3pt"]
+[gd_scene load_steps=8 format=3 uid="uid://dbowkksthp3pt"]
 
-[ext_resource type="Script" uid="uid://bny6x6pdwvim1" path="res://scripts/opciones.gd" id="1_b3crd"]
+[ext_resource type="Script" uid="uid://bny6x6pdwvim1" path="res://scripts/volver.gd" id="1_b3crd"]
 [ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="2_be1uu"]
+[ext_resource type="Script" uid="uid://b6kxiasqc3xed" path="res://scripts/iniciar_sesion.gd" id="3_m1k1h"]
+[ext_resource type="Script" uid="uid://c2owr0s2rogk5" path="res://scripts/registrarse.gd" id="4_8j4ho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]
 bg_color = Color(0, 0, 0, 0.607843)
@@ -65,22 +67,28 @@ grow_vertical = 2
 theme_override_constants/separation = 8
 
 [node name="IniciarSesion" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_p25xy")
 text = "Iniciar Sesion"
+script = ExtResource("3_m1k1h")
 
 [node name="Registrarse" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_17m5t")
 text = "Registrarse"
+script = ExtResource("4_8j4ho")
 
 [node name="Volver" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_kim34")
 text = "Volver"
+script = ExtResource("1_b3crd")
 
 [node name="LabelInicioSesion" type="Label" parent="."]
 layout_mode = 1
@@ -100,6 +108,7 @@ text = "Inicio Sesion"
 horizontal_alignment = 1
 
 [node name="result_label" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -133,6 +142,7 @@ text = "Usuario"
 horizontal_alignment = 1
 
 [node name="LabelContraseña" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -150,6 +160,7 @@ text = "Contraseña"
 horizontal_alignment = 1
 
 [node name="Usuario" type="TextEdit" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 438.0
 offset_top = 155.0
@@ -157,12 +168,13 @@ offset_right = 689.0
 offset_bottom = 217.0
 
 [node name="Contraseña" type="TextEdit" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 439.0
 offset_top = 263.0
 offset_right = 690.0
 offset_bottom = 325.0
 
-[connection signal="pressed" from="VBoxContainer/IniciarSesion" to="." method="_on_iniciar_sesion_pressed"]
-[connection signal="pressed" from="VBoxContainer/Registrarse" to="." method="_on_registrarse_pressed"]
+[connection signal="pressed" from="VBoxContainer/IniciarSesion" to="VBoxContainer/IniciarSesion" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Registrarse" to="VBoxContainer/Registrarse" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_volver_pressed"]

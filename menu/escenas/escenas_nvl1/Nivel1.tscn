@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dy5t4hprc4bjo"]
+[gd_scene load_steps=18 format=3 uid="uid://dy5t4hprc4bjo"]
 
 [ext_resource type="PackedScene" uid="uid://ceiwaowuonlr5" path="res://escenas/escenas_nvl1/Personaje.tscn" id="1_4400i"]
 [ext_resource type="Texture2D" uid="uid://svpfnhcku73l" path="res://recursos/sprites/world_tileset.png" id="2_jpvoe"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://coj7ig6dtsyja" path="res://escenas/escenas_nvl1/zona_de_muerte.tscn" id="5_ymjfq"]
 [ext_resource type="PackedScene" uid="uid://bgmc8cee86ry" path="res://escenas/escenas_nvl1/plataformaHaciaArriba.tscn" id="6_yeal7"]
 [ext_resource type="PackedScene" uid="uid://bt5jmybjlqshs" path="res://escenas/escenas_nvl1/enemigo.tscn" id="7_oa0dg"]
+[ext_resource type="Script" uid="uid://bt3oc4yqgcan5" path="res://scripts/game_manager.gd" id="8_8i7lc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e685u"]
 texture = ExtResource("2_jpvoe")
@@ -321,3 +322,7 @@ autoplay = "Movimiento"
 
 [node name="Enemigo" parent="." instance=ExtResource("7_oa0dg")]
 position = Vector2(152, -16)
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_8i7lc")

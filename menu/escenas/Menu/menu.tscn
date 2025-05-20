@@ -92,6 +92,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kim34")
 text = "Salir"
 
 [node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -109,6 +110,7 @@ text = "LAS AVENTURAS DE PIXEL"
 horizontal_alignment = 1
 
 [node name="Usuario" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 934.0
 offset_top = 30.0
