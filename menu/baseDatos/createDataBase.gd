@@ -18,7 +18,7 @@ func crear_tablas():
 	db.query("""
 		CREATE TABLE IF NOT EXISTS Usuario (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
-			username TEXT NOT NULL,
+			username TEXT NOT NULL UNIQUE,
 			password TEXT NOT NULL
 		);
 	""")
@@ -31,6 +31,11 @@ func crear_tablas():
 			dificultad INTEGER
 		);
 	""")
+	db.query("""
+		INSERT INTO Nivel (nombre, descripcion, dificultad)
+		VALUES ("Nivel1", "Nivel donde empiezas las primeras aventuras de pixel", 1);
+	""")
+
 
 	db.query("""
 		CREATE TABLE IF NOT EXISTS Puntuacion (
@@ -38,16 +43,6 @@ func crear_tablas():
 			usuario_id INTEGER NOT NULL,
 			nivel_id INTEGER NOT NULL,
 			puntuacion INTEGER NOT NULL,
-			FOREIGN KEY(usuario_id) REFERENCES Usuario(id),
-			FOREIGN KEY(nivel_id) REFERENCES Nivel(id)
-		);
-	""")
-
-	db.query("""
-		CREATE TABLE IF NOT EXISTS Tiempo (
-			id INTEGER PRIMARY KEY AUTOINCREMENT,
-			usuario_id INTEGER NOT NULL,
-			nivel_id INTEGER NOT NULL,
 			tiempo_segundos INTEGER NOT NULL,
 			FOREIGN KEY(usuario_id) REFERENCES Usuario(id),
 			FOREIGN KEY(nivel_id) REFERENCES Nivel(id)

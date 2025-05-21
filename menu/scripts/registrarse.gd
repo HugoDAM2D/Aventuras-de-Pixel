@@ -1,7 +1,8 @@
 extends Button
 
-@onready var username_textedit: TextEdit = %Usuario
-@onready var password_textedit: TextEdit = %Contraseña
+
+@onready var username_textedit: TextEdit = %InicioUsuario
+@onready var password_textedit: TextEdit = %InicioContraseña
 @onready var status_label: Label = %result_label
 @onready var db := SQLite.new()
 var db_path = "user://mi_base_de_datos.sqlite"
@@ -10,6 +11,7 @@ func _on_pressed() -> void:
 	var username = username_textedit.text.strip_edges()
 	var password = password_textedit.text.strip_edges()
 	if crear_usuario(username, password) == true:
+		UsuarioMenu.usuario_actual = username
 		get_tree().change_scene_to_file("res://escenas/Menu/menu.tscn")
 	
 	

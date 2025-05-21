@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 CreateDataBase="*res://baseDatos/createDataBase.gd"
 UsuarioMenu="*res://scripts/usuarioMenu.gd"
+Musica="*res://escenas/musica.tscn"
 
 [editor_plugins]
 

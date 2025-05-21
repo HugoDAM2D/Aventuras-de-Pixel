@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var posicion_inicial: Vector2
 
@@ -21,6 +22,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		audio_stream_player_2d.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

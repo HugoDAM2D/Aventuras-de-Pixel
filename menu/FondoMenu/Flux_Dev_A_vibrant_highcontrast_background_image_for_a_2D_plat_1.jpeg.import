@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjupsinkvrl1x"
-path="res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"
+path="res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-98787a5836758397c3c2d62b6ecf09ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg"
-dest_files=["res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-7c5b188c8b02bf6a47aacb6212ac4846.ctex"]
+source_file="res://FondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg"
+dest_files=["res://.godot/imported/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg-98787a5836758397c3c2d62b6ecf09ae.ctex"]
 
 [params]
 
