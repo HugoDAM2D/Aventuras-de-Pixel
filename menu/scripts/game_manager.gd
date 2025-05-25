@@ -5,6 +5,8 @@ var db_path = "user://mi_base_de_datos.sqlite"
 
 var puntuacion = 0
 var tiempo := 0
+var finalizadoN = 0
+var finalizadoS = 1
 
 func  _ready() -> void:
 	empezar_tiempo()
@@ -20,15 +22,17 @@ func empezar_tiempo():
 func enviar_tiempo():
 	var segundos_totales = int( Time.get_ticks_msec() - tiempo) / 1000.0
 	var username = 	UsuarioMenu.usuario_actual
-	mandarDatos(username,segundos_totales)
+	mandarDatosMuerte(username,segundos_totales)
 	
-func mandarDatos(username: String, segundos: int ):
+func enviar_tiempo_final():
+	var segundos_totales = int( Time.get_ticks_msec() - tiempo) / 1000.0
+	var username = 	UsuarioMenu.usuario_actual
+	mandarDatosVictoria(username,segundos_totales)
+	
+func mandarDatosMuerte(username: String, segundos: int ):
 	db.path = db_path
 	db.open_db()
 
-	# Verificar si ya existe
-	# INSERT INTO Nivel (nombre, descripcion, dificultad)
-	#	VALUES ("Primer nivel", "Nivel donde empiezas las primeras aventuras de pixel", 1);
 	var check_query = "SELECT id FROM Usuario WHERE username = '%s';" % username
 	db.query(check_query)
 	print(db.query_result)
@@ -36,6 +40,21 @@ func mandarDatos(username: String, segundos: int ):
 	var userId = int(db.query_result[0]["id"])
 	
 	# Insertar nuevo usuario
-	var insert_query = "INSERT INTO Puntuacion (usuario_id, nivel_id, puntuacion, tiempo_segundos)
-	 VALUES ('%s', '%s','%s','%s');" % [userId,1,puntuacion,segundos]
+	var insert_query = "INSERT INTO Puntuacion (usuario_id, nivel_id, puntuacion, tiempo_segundos,finalizado)
+	 VALUES ('%s', '%s','%s','%s','%s');" % [userId,1,puntuacion,segundos,finalizadoN]
+	db.query(insert_query)
+	
+func mandarDatosVictoria(username: String, segundos: int ):
+	db.path = db_path
+	db.open_db()
+
+	var check_query = "SELECT id FROM Usuario WHERE username = '%s';" % username
+	db.query(check_query)
+	print(db.query_result)
+	print(db.query_result[0])
+	var userId = int(db.query_result[0]["id"])
+	
+	# Insertar nuevo usuario
+	var insert_query = "INSERT INTO Puntuacion (usuario_id, nivel_id, puntuacion, tiempo_segundos,finalizado)
+	 VALUES ('%s', '%s','%s','%s','%s');" % [userId,1,puntuacion,segundos,finalizadoS]
 	db.query(insert_query)

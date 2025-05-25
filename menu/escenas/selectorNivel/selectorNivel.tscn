@@ -1,0 +1,216 @@
+[gd_scene load_steps=8 format=3 uid="uid://77bm6he8n23x"]
+
+[ext_resource type="Script" uid="uid://bny6x6pdwvim1" path="res://scripts/volver.gd" id="1_ib3cb"]
+[ext_resource type="Texture2D" uid="uid://tcd0n3goq7bg" path="res://escenas/selectorNivel/ChatGPT Image 25 may 2025, 10_34_27.png" id="2_yaw84"]
+[ext_resource type="FontFile" uid="uid://cykphsivovtpc" path="res://recursos/fonts/PixelOperator8-Bold.ttf" id="3_1oew3"]
+[ext_resource type="PackedScene" uid="uid://22m71dkjqb63" path="res://escenas/selectorNivel/botonSelector.tscn" id="3_18ag1"]
+[ext_resource type="Script" uid="uid://bqfkf0qpgymqt" path="res://scripts/puntuacion.gd" id="4_ie7pd"]
+[ext_resource type="Script" uid="uid://bduwfomnor805" path="res://scripts/boton_nvl1.gd" id="4_yaw84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kim34"]
+bg_color = Color(0, 0, 0, 0.607843)
+
+[node name="SeleccionNivel" type="Control"]
+layout_mode = 3
+anchor_right = 1.023
+anchor_bottom = 1.035
+offset_right = -37.496
+offset_bottom = -20.6801
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ib3cb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 651.0
+texture = ExtResource("2_yaw84")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.647
+anchor_bottom = 0.708
+offset_right = -227.262
+offset_bottom = -183.04
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.312583, 0.317954, 0.332728, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -292.0
+offset_right = 496.5
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 40
+text = "SELECCIÓN NIVEL"
+horizontal_alignment = 1
+
+[node name="Volver" type="Button" parent="."]
+layout_mode = 2
+offset_left = 96.0
+offset_top = 594.0
+offset_right = 367.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_kim34")
+text = "Volver"
+
+[node name="Puntacion" type="Button" parent="."]
+layout_mode = 2
+offset_left = 780.0
+offset_top = 265.0
+offset_right = 951.0
+offset_bottom = 301.0
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_kim34")
+text = "Puntuaciones"
+script = ExtResource("4_ie7pd")
+
+[node name="Botones" type="Node2D" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 604.0
+offset_top = 226.0
+offset_right = 676.0
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="BotonLVL1" parent="Botones/VBoxContainer" instance=ExtResource("3_18ag1")]
+layout_mode = 2
+script = ExtResource("4_yaw84")
+
+[node name="Button2" parent="Botones/VBoxContainer" instance=ExtResource("3_18ag1")]
+layout_mode = 2
+
+[node name="Button3" parent="Botones/VBoxContainer" instance=ExtResource("3_18ag1")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 608.0
+offset_top = 242.0
+offset_right = 667.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 40
+text = "1"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 610.0
+offset_top = 323.0
+offset_right = 669.0
+offset_bottom = 371.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 40
+text = "2"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 610.0
+offset_top = 405.0
+offset_right = 669.0
+offset_bottom = 453.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 663.0
+offset_top = 405.0
+offset_right = 1057.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 30
+text = "Proximamente"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 664.0
+offset_top = 326.0
+offset_right = 1058.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 30
+text = "Proximamente"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Botones"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 673.0
+offset_top = 227.0
+offset_right = 1067.0
+offset_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1oew3")
+theme_override_font_sizes/font_size = 30
+text = "Nivel 1"
+horizontal_alignment = 1
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+title = "Ranking"
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Puntacion" to="Puntacion" method="_on_pressed"]
+[connection signal="pressed" from="Botones/VBoxContainer/BotonLVL1" to="Botones/VBoxContainer/BotonLVL1" method="_on_pressed"]

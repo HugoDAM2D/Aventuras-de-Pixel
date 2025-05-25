@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://22m71dkjqb63"]
+
+[ext_resource type="Texture2D" uid="uid://xtsayg0m5xjt" path="res://recursos/Vector/Tiles/block_yellow.svg" id="1_cmm74"]
+
+[node name="Button" type="Button"]
+offset_left = 89.0
+offset_top = 63.0
+offset_right = 161.0
+offset_bottom = 135.0
+icon = ExtResource("1_cmm74")

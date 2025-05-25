@@ -44,6 +44,7 @@ func crear_tablas():
 			nivel_id INTEGER NOT NULL,
 			puntuacion INTEGER NOT NULL,
 			tiempo_segundos INTEGER NOT NULL,
+			finalizado INTEGER NOT NULL,
 			FOREIGN KEY(usuario_id) REFERENCES Usuario(id),
 			FOREIGN KEY(nivel_id) REFERENCES Nivel(id)
 		);

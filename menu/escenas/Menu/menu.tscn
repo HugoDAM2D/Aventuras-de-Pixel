@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cop15v8wf1bq"]
+[gd_scene load_steps=8 format=3 uid="uid://cop15v8wf1bq"]
 
-[ext_resource type="Texture2D" uid="uid://bjupsinkvrl1x" path="res://FondoMenu/Flux_Dev_A_vibrant_highcontrast_background_image_for_a_2D_plat_1.jpeg" id="1_lnt83"]
 [ext_resource type="Script" uid="uid://bnto55mqa2xu3" path="res://scripts/menu.gd" id="1_p25xy"]
+[ext_resource type="Texture2D" uid="uid://ibf6re06gag3" path="res://recursos/ChatGPT Image 25 may 2025, 09_56_15.png" id="2_qmo4h"]
+[ext_resource type="FontFile" uid="uid://cykphsivovtpc" path="res://recursos/fonts/PixelOperator8-Bold.ttf" id="3_17x2k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]
 bg_color = Color(0, 0, 0, 0.607843)
@@ -49,7 +50,7 @@ offset_right = 9.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lnt83")
+texture = ExtResource("2_qmo4h")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -99,12 +100,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -184.5
-offset_top = -251.0
-offset_right = 162.5
-offset_bottom = -91.9999
+offset_left = -398.5
+offset_top = -231.0
+offset_right = 411.5
+offset_bottom = -71.9998
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_17x2k")
 theme_override_font_sizes/font_size = 40
 text = "LAS AVENTURAS DE PIXEL"
 horizontal_alignment = 1
@@ -116,6 +118,23 @@ offset_left = 934.0
 offset_top = 30.0
 offset_right = 1123.0
 offset_bottom = 116.0
+
+[node name="result_label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 182.5
+offset_top = -46.9999
+offset_right = 539.5
+offset_bottom = 14.0002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Inicio Sesion" to="." method="_on_inicio_sesion_pressed"]

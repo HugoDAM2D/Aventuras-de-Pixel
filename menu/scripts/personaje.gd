@@ -44,3 +44,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func aplicar_impulso_hacia_arriba(cantidad_impulso : float) -> void:
+	velocity.y = -cantidad_impulso
