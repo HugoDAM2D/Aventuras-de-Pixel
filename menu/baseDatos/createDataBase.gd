@@ -4,6 +4,7 @@ var db : SQLite = SQLite.new()
 
 func _ready():
 	var db_path = "user://mi_base_de_datos.sqlite"
+	print(Engine.get_singleton_list())
 
 	if not FileAccess.file_exists(db_path):
 		db.path = db_path
@@ -49,3 +50,4 @@ func crear_tablas():
 			FOREIGN KEY(nivel_id) REFERENCES Nivel(id)
 		);
 	""")
+	

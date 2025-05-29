@@ -50,7 +50,8 @@ script = ExtResource("1_rkj7h")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_idneh")
 autoplay = "default"
-frame_progress = 0.620394
+frame = 2
+frame_progress = 0.411653
 
 [node name="ZonaDeMuerte" parent="." instance=ExtResource("2_rkj7h")]
 

@@ -27,7 +27,9 @@ func crear_usuario(username: String, password: String) -> bool:
 		status_label.text = "El usuario ya existe."
 		db.close_db()
 		return false
-
+	if username == "" or password == "":
+		status_label.text = "Faltan Datos"
+		return false
 	# Insertar nuevo usuario
 	var insert_query = "INSERT INTO Usuario (username, password) VALUES ('%s', '%s');" % [username, password]
 	db.query(insert_query)
