@@ -2,11 +2,13 @@ extends Node
 
 @onready var db := SQLite.new()
 var db_path = "user://mi_base_de_datos.sqlite"
+signal puntuacion_actualizada(puntuacion_actual:int)
 
 var puntuacion = 0
 var tiempo := 0
 var finalizadoN = 0
 var finalizadoS = 1
+
 
 func  _ready() -> void:
 	empezar_tiempo()
@@ -14,8 +16,8 @@ func  _ready() -> void:
 
 func incrementa_puntuacion():
 	puntuacion += 1
-	print(puntuacion)
-
+	puntuacion_actualizada.emit(puntuacion)
+	
 func empezar_tiempo():
 	tiempo += Time.get_ticks_msec()
 

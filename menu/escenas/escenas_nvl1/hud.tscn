@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://q8fysmoru1a0"]
+
+[ext_resource type="Script" uid="uid://ceh453jtpigtg" path="res://scripts/hud.gd" id="1_da0c7"]
+[ext_resource type="Texture2D" uid="uid://b6uid421j6j2m" path="res://recursos/sprites/coin.png" id="1_t5k77"]
+[ext_resource type="FontFile" uid="uid://cykphsivovtpc" path="res://recursos/fonts/PixelOperator8-Bold.ttf" id="2_pq7d6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq7d6"]
+atlas = ExtResource("1_t5k77")
+region = Rect2(0, 0, 16, 16)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_da0c7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 37.0
+offset_top = 22.0
+offset_right = 77.0
+offset_bottom = 62.0
+texture = SubResource("AtlasTexture_pq7d6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 34.0
+offset_right = 97.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("2_pq7d6")
+theme_override_font_sizes/font_size = 16
+text = "x"
+
+[node name="Contador" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 34.0
+offset_right = 131.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("2_pq7d6")
+theme_override_font_sizes/font_size = 16
+text = "0"
