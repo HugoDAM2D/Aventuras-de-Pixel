@@ -1,9 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://ceiwaowuonlr5"]
+[gd_scene load_steps=31 format=3 uid="uid://ceiwaowuonlr5"]
 
 [ext_resource type="Texture2D" uid="uid://c8ah3u8g6nrfs" path="res://recursos/sprites/knight.png" id="1_1d3hk"]
 [ext_resource type="Script" uid="uid://b4rw8f2iusn0e" path="res://scripts/personaje.gd" id="1_dceia"]
 [ext_resource type="AudioStream" uid="uid://vapydnvb2vi7" path="res://recursos/sounds/jump.wav" id="3_pj571"]
-[ext_resource type="Script" uid="uid://cmhlu2yjlwta3" path="res://scripts/salir_con_esc.gd" id="4_vmmym"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_71vdu"]
 atlas = ExtResource("1_1d3hk")
@@ -226,4 +225,3 @@ stream = ExtResource("3_pj571")
 bus = &"Efectos de Sonido"
 
 [node name="SalirConESC" type="Node2D" parent="."]
-script = ExtResource("4_vmmym")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dy5t4hprc4bjo"]
+[gd_scene load_steps=34 format=3 uid="uid://dy5t4hprc4bjo"]
 
 [ext_resource type="PackedScene" uid="uid://ceiwaowuonlr5" path="res://escenas/escenas_nvl1/Personaje.tscn" id="1_4400i"]
 [ext_resource type="PackedScene" uid="uid://q8fysmoru1a0" path="res://escenas/escenas_nvl1/hud.tscn" id="1_rdac4"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://bqpekkdabe687" path="res://scripts/zona_de_victoria.gd" id="13_xrur2"]
 [ext_resource type="FontFile" uid="uid://cykphsivovtpc" path="res://recursos/fonts/PixelOperator8-Bold.ttf" id="14_rw6u2"]
 [ext_resource type="FontFile" uid="uid://bprq5k3gpgnyh" path="res://recursos/fonts/PixelOperator8.ttf" id="15_h6aiu"]
+[ext_resource type="PackedScene" uid="uid://bo14oui3tg13g" path="res://escenas/escenas_nvl1/pause_menu.tscn" id="17_2668r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e685u"]
 texture = ExtResource("2_jpvoe")
@@ -542,6 +543,16 @@ rotation = -0.561282
 theme_override_fonts/font = ExtResource("14_rw6u2")
 text = "➜"
 
+[node name="Label8" type="Label" parent="Etiquetas"]
+layout_mode = 0
+offset_left = 566.0
+offset_top = -46.0
+offset_right = 622.0
+offset_bottom = -23.0
+rotation = 1.56275
+theme_override_fonts/font = ExtResource("14_rw6u2")
+text = "➜"
+
 [node name="Label4" type="Label" parent="Etiquetas"]
 layout_mode = 0
 offset_left = 412.0
@@ -573,3 +584,7 @@ theme_override_fonts/font = ExtResource("14_rw6u2")
 theme_override_font_sizes/font_size = 8
 text = "Alzate al cielo
  para la victoria"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("17_2668r")]

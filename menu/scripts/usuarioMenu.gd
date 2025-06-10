@@ -1,9 +1,6 @@
 extends Node
 var usuario_actual = ""
 
-func _input(event) -> void:
-	if event.is_action("salir"):
-		get_tree().quit()
 		
 func _unhandled_input(event):
 	if event.is_action_pressed("cambiar_visualizacion"):
