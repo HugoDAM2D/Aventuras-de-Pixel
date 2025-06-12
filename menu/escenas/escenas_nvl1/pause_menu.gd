@@ -4,6 +4,7 @@ func resumen():
 	get_tree().paused = false
 	$AnimationPlayer.play_backwards("pausa") # Reproduce hacia atrás para salir de la pausa
 
+
 func pause():
 	get_tree().paused = true
 	$AnimationPlayer.play("pausa") # Reproduce hacia adelante para entrar en la pausa
